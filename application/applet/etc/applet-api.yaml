@@ -1,0 +1,23 @@
+Name: applet-api
+Host: 0.0.0.0
+Port: 8888
+#jwt配置
+Auth:
+  AccessSecret: 23141414g141412412
+  AccessExpire: 10000
+  RefreshSecret: 214155y124141
+  RefreshExpire:  10000
+  RefreshAfter: 10000
+#userrpc客户端
+UserRPC:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: user.rpc
+  #指示Etcd客户端与Etcd服务器交互时应使用非阻塞模式。这可以提高客户端的响应性和吞吐量，尤其是在处理大量并发请求时
+  NonBlock: true
+BizRedis:
+  Host: 127.0.0.1:36379
+  Pass: G62m50oigInC30sf
+  #表示客户端应该连接到单个 redis 服务器
+  Type: node
